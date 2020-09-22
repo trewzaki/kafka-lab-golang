@@ -68,4 +68,6 @@ func KafkaProducer(topic string, msg []byte) {
 		TopicPartition: kafka.TopicPartition{Topic: &topic, Partition: kafka.PartitionAny},
 		Value:          msg,
 	}, nil)
+
+	// time.Sleep(time.Millisecond * 100)
 }
